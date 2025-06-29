@@ -466,7 +466,11 @@
               fileName: file.name,
               fileData: reader.result,
             };
-            this.sendMessage("document", JSON.stringify(fileData));
+            const isImage = file.type.startsWith("image/");
+            this.sendMessage(
+              isImage ? "image" : "document",
+              JSON.stringify(fileData)
+            );
             this.fileInput.value = "";
           };
           reader.readAsDataURL(file);
@@ -490,7 +494,7 @@
         addMessageToChat(data) {
           const messageDiv = document.createElement("div");
           messageDiv.classList.add("message");
-          console.log(data);
+
           const isMyMessage = String(data.senderName) === String(this.username);
           messageDiv.classList.add(isMyMessage ? "myMessage" : "otherMessage");
 
@@ -515,6 +519,24 @@
                 <a href="${fileInfo.fileData}" download="${fileInfo.fileName}">
                   📎 ${fileInfo.fileName}
                 </a>
+              </div>
+              <span class="timestamp">${this.formatTimestamp(
+                data.timestamp
+              )}</span>
+            `;
+          } else if (data.messageType === "image") {
+            const fileInfo =
+              typeof data.content === "string"
+                ? JSON.parse(data.content)
+                : data.content;
+
+            messageDiv.classList.add("file-message");
+            messageDiv.innerHTML = `
+              <strong>${data.senderName}:</strong>
+              <div>
+                <img src="${fileInfo.fileData}" alt="${
+              fileInfo.fileName
+            }" style="max-width: 200px; max-height: 200px; border-radius: 8px;"/>
               </div>
               <span class="timestamp">${this.formatTimestamp(
                 data.timestamp

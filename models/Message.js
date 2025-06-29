@@ -5,7 +5,7 @@ const Message = new mongoose.Schema({
   senderName: { type: String, required: true },
   messageType: {
     type: String,
-    enum: ["text", "document"],
+    enum: ["text", "document", "image"],
     default: "text",
   },
   content: { type: String, required: true },
