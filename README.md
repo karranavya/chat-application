@@ -41,6 +41,27 @@ A web-based chat application that enables users to communicate in real-time. It 
 ### Steps
 
 1. **Clone the repository**
+   
    ```bash
    git clone https://github.com/your-username/repository-name.git
    cd repository-name
+   
+2. **Install dependencies**
+   ```bash
+   npm install
+   
+3.**Configure environment variables**
+- Create a .env file in the root directory and add:
+   ```bash
+   PORT=5000
+   MONGO_URI=your_mongodb_connection_string
+   JWT_SECRET=your_jwt_secret
+
+4.**Start the server**
+   ```bash
+   npm start
+
+5.**Open the app in your browser at**
+   ```bash
+   http://localhost:5000
+
