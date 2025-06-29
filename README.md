@@ -2,7 +2,6 @@
 
 A web-based chat application that enables users to communicate in real-time. It supports secure authentication, persistent messaging, and file sharing. Built using **Node.js**, **Express**, **MongoDB**, and **Socket.IO**.
 
----
 
 ##  Features
 
@@ -14,7 +13,6 @@ A web-based chat application that enables users to communicate in real-time. It 
 -  Scalable to handle multiple users
 -  View previous chat history on login
 
----
 
 ##  Tech Stack
 
@@ -30,7 +28,6 @@ A web-based chat application that enables users to communicate in real-time. It 
 | Multer      | File upload handling (images/docs)     |
 | HTML, CSS, JS | Frontend                             |
 
----
 
 ##  Installation & Setup
 
@@ -43,8 +40,8 @@ A web-based chat application that enables users to communicate in real-time. It 
 1. **Clone the repository**
    
    ```bash
-   git clone https://github.com/your-username/repository-name.git
-   cd repository-name
+   git clone https://github.com/karranavya/chat-application.git
+   cd chat-application
    
 2. **Install dependencies**
    ```bash
@@ -79,13 +76,12 @@ A web-based chat application that enables users to communicate in real-time. It 
 ###  File Sharing
 - Upload and share images and documents within the chat.
 
----
 
 ##  Author
 
 **K Sree Navya**  
 Intern at **QTech Solutions**  
-GitHub: [@KarraNavya](https://github.com/KarraNavya)
+GitHub: [@KarraNavya](https://github.com/karranavya)
 
----
+
 
