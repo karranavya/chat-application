@@ -80,7 +80,6 @@ A web-based chat application that enables users to communicate in real-time. It 
 ##  Author
 
 **K Sree Navya**  
-Intern at **QTech Solutions**  
 GitHub: [@KarraNavya](https://github.com/karranavya)
 
 
